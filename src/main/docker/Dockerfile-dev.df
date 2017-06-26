@@ -12,8 +12,9 @@ ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
     JAVA_MAX_MEM_RATIO=90 \
     JAVA_APP_DIR=/deployments \
     JAVA_APP_JAR=jhipster-registry.war \
-    SPRING_PROFILES_ACTIVE=prod,git \
-    SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github.com/trifonnt/jhipster-registry-sample-config/ \
-    SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATH=central-config
+    SPRING_PROFILES_ACTIVE=dev,native \
+#   SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://github.com/trifonnt/jhipster-registry/ \
+#   SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATH=central-config
+    SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=file:./central-config/
 
 EXPOSE 8761
